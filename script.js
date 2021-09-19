@@ -21,6 +21,7 @@ document.querySelectorAll('.item').forEach((item)=>{
             quadro[loc] = vez;
             renderQuadro();
             togglePlayer();
+            
         }
     });
 });
@@ -32,7 +33,9 @@ function reset() {
     // definir a vez
     let random = Math.floor(Math.random() * 2);
     vez = random === 0 ? 'x' : 'o';
+    
 
+   
     // resetar os quadros
     for(let i in quadro) {
         quadro[i] = '';
@@ -54,6 +57,7 @@ function renderQuadro() {
             item.innerHTML = '';
         }
     }
+    
 
     checkGame();
 }
